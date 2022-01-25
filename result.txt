@@ -1,3 +1,4 @@
 1*2тут строка
 git rev-parse --abbrev-ref HEAD
 2fceef9c36139a228fe60e6beb7a63532ceb064e
+master
