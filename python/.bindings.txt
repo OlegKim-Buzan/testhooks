@@ -319,7 +319,7 @@
 6/RefAddr/9/Content=2
 6/RefAddr/9/Encoding=String
 6/RefAddr/9/Type=MBODY8/ClassName=com.ibm.mq.jms.MQQueue
-8/FactoryName=com.ibm.mq.jms.MQQueueFactory
+8/FactoryName=com.ibm.mq.jms.MQQueueFactor
 8/RefAddr/0/Content=7
 8/RefAddr/0/Encoding=String
 8/RefAddr/0/Type=VER
