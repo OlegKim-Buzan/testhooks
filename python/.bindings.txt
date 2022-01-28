@@ -1,4 +1,4 @@
-1/ClassName=com.ibm.mq.jms.MQQueue
+1/ClassName=com.ibm.mq.jms.MQQueu
 1/FactoryName=com.ibm.mq.jms.MQQueueFactory
 1/RefAddr/0/Content=7
 1/RefAddr/0/Encoding=String
