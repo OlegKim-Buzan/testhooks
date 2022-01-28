@@ -8,13 +8,8 @@
 # To enable this hook, rename this file to "pre-commit".
 
 R=$(git rev-parse --abbrev-ref HEAD)
-
-if [ "$R" = "master" ]
-	then ( for i in *val.txt ; do cat $i ; echo ; done ) > result.txt
-		 ( for j in /c/Users/doomi/Desktop/test/val2/*val.txt ; do cat $j ; echo ; done ) >> /c/Users/doomi/Desktop/test/result.txt
-fi
-
-
+( for i in *val.txt ; do cat $i ; echo ; done ) > result.txt
+( for j in /c/Users/doomi/Desktop/test/val2/*val.txt ; do cat $j ; echo ; done ) >> /c/Users/doomi/Desktop/test/result.txt
 
 
 git add result.txt
