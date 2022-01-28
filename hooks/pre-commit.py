@@ -22,7 +22,7 @@ for line in lines:
             newresult = standart
             newresult = newresult.replace("@tagName@", pieceofline)
             result += newresult
-        if re.search(r'.*test.*', line) is not None and branch == 'test' :
+        if re.search('test', line) is not None and branch == 'test' :
             h = line.strip()
             l = h.find(' #')
             pieceofline = h[:l]
