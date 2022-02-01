@@ -68,11 +68,11 @@ for line in lines:
         newresult = standart
         newresult = newresult.replace("@tagName@", line.strip())
         result += newresult
-
+result = result + '\n'
 curLineBranch = ''
 conlines = connection_file.readlines()
 for conline in conlines: 
-    if '#' in conline:
+    if "#" in conline:
         curLineBranch = conline
     else:
         if branch in curLineBranch or curLineBranch == '':
