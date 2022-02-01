@@ -2,15 +2,16 @@ import re
 
 branch = 'dev'
 
-result_file = open("python\.bindings.txt", "w")
-source_file = open("python\.bindings.queue.txt", "r")
-standart_file = open("python\.bindings.standart.txt", "r")
-connection_file = open("python\.bindings.connection.txt", "r")
+result_file = open("C:\Users\doomi\Desktop\test\python\.bindings.txt", "w")
+source_file = open("C:\Users\doomi\Desktop\test\python\.bindings.queue.txt", "r")
+standart_file = open("C:\Users\doomi\Desktop\test\python\.bindings.standart.txt", "r")
+connection_file = open("C:\Users\doomi\Desktop\test\python\.bindings.connection.txt", "r")
 
 
 result = ''
 standart = standart_file.read()
 lines = source_file.readlines()
+#connection = connection_file.read()
 
 for line in lines:
     if "#" in line:
