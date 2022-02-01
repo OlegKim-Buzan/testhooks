@@ -1,4 +1,3 @@
 #!/bin/sh
-R=$(git rev-parse --abbrev-ref HEAD)
 python .git/hooks/pre-commit.py "$R"
 git add python/.bindings.txt
