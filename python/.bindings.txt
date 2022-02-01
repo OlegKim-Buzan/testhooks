@@ -383,8 +383,4 @@
 10/RefAddr/9/Content=2
 10/RefAddr/9/Encoding=String
 10/RefAddr/9/Type=MBODYWMB01QM/ClassName=0000000000000000
-#dev
 WMB01QM/FactoryName=11111111111111
-#test
-WMB01QM/FactoryName=11111111111111
-
