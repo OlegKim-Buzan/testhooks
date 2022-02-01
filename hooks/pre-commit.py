@@ -72,7 +72,7 @@ for line in lines:
 curLineBranch = ''
 conlines = connection_file.readlines()
 for conline in conlines: 
-    if "#" in line:
+    if '#' in conline:
         curLineBranch = conline
     else:
         if branch in curLineBranch or curLineBranch == '':
