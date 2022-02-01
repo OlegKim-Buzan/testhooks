@@ -1,6 +1,6 @@
 import re
 
-branch = 'dev'
+branch = sys.argv[1]
 
 result_file = open("C:\Users\doomi\Desktop\test\python\.bindings.txt", "w")
 source_file = open("C:\Users\doomi\Desktop\test\python\.bindings.queue.txt", "r")
