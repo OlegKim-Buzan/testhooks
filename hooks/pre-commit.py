@@ -17,56 +17,57 @@ for line in lines:
         if "#>" in line:
             h = line.strip()
             l = h.find(' #>')
-            result += '\n' + h[l+4:] + '\n'
-        if re.search(r'.*#.*dev.*' , line) is not None and branch == 'dev' :
-            h = line.strip()
-            l = h.find(' #')
-            pieceofline = h[:l]
-            newresult = standart
-            newresult = newresult.replace("@tagName@", pieceofline)
-            result += newresult
-        if (re.search(r'.*#.*test\n.*', line) is not None or re.search(r'.*#.*test,.*', line) is not None) and branch == 'test' :
-            h = line.strip()
-            l = h.find(' #')
-            pieceofline = h[:l]
-            newresult = standart
-            newresult = newresult.replace("@tagName@", pieceofline)
-            result += newresult
-        if (re.search(r'.*#.*prod\n', line) is not None or re.search(r'.*#.*prod,', line) is not None) and branch == 'prod' :
-            h = line.strip()
-            l = h.find(' #')
-            pieceofline = h[:l]
-            newresult = standart
-            newresult = newresult.replace("@tagName@", pieceofline)
-            result += newresult
-        if re.search(r'.*#.*qf.*', line) is not None and branch == 'qf' :
-            h = line.strip()
-            l = h.find(' #')
-            pieceofline = h[:l]
-            newresult = standart
-            newresult = newresult.replace("@tagName@", pieceofline)
-            result += newresult
-        if re.search(r'.*#.*prodlike2.*', line) is not None and branch == 'prodlike2' :
-            h = line.strip()
-            l = h.find(' #')
-            pieceofline = h[:l]
-            newresult = standart
-            newresult = newresult.replace("@tagName@", pieceofline)
-            result += newresult
-        if re.search(r'.*#.*test2.*', line) is not None and branch == 'test2' :
-            h = line.strip()
-            l = h.find(' #')
-            pieceofline = h[:l]
-            newresult = standart
-            newresult = newresult.replace("@tagName@", pieceofline)
-            result += newresult
-        if (re.search(r'.*#.*prodlike\n.*', line) is not None or re.search(r'.*#.*prodlike,.*', line) is not None) and branch == 'prodlike' :
-            h = line.strip()
-            l = h.find(' #')
-            pieceofline = h[:l]
-            newresult = standart
-            newresult = newresult.replace("@tagName@", pieceofline)
-            result += newresult
+            result += '\n#' + h[l+4:] + '\n'
+        else: 
+            if re.search(r'.*#.*dev.*' , line) is not None and branch == 'dev' :
+                h = line.strip()
+                l = h.find(' #')
+                pieceofline = h[:l]
+                newresult = standart
+                newresult = newresult.replace("@tagName@", pieceofline)
+                result += newresult
+            if (re.search(r'.*#.*test\n.*', line) is not None or re.search(r'.*#.*test,.*', line) is not None) and branch == 'test' :
+                h = line.strip()
+                l = h.find(' #')
+                pieceofline = h[:l]
+                newresult = standart
+                newresult = newresult.replace("@tagName@", pieceofline)
+                result += newresult
+            if (re.search(r'.*#.*prod\n', line) is not None or re.search(r'.*#.*prod,', line) is not None) and branch == 'prod' :
+                h = line.strip()
+                l = h.find(' #')
+                pieceofline = h[:l]
+                newresult = standart
+                newresult = newresult.replace("@tagName@", pieceofline)
+                result += newresult
+            if re.search(r'.*#.*qf.*', line) is not None and branch == 'qf' :
+                h = line.strip()
+                l = h.find(' #')
+                pieceofline = h[:l]
+                newresult = standart
+                newresult = newresult.replace("@tagName@", pieceofline)
+                result += newresult
+            if re.search(r'.*#.*prodlike2.*', line) is not None and branch == 'prodlike2' :
+                h = line.strip()
+                l = h.find(' #')
+                pieceofline = h[:l]
+                newresult = standart
+                newresult = newresult.replace("@tagName@", pieceofline)
+                result += newresult
+            if re.search(r'.*#.*test2.*', line) is not None and branch == 'test2' :
+                h = line.strip()
+                l = h.find(' #')
+                pieceofline = h[:l]
+                newresult = standart
+                newresult = newresult.replace("@tagName@", pieceofline)
+                result += newresult
+            if (re.search(r'.*#.*prodlike\n.*', line) is not None or re.search(r'.*#.*prodlike,.*', line) is not None) and branch == 'prodlike' :
+                h = line.strip()
+                l = h.find(' #')
+                pieceofline = h[:l]
+                newresult = standart
+                newresult = newresult.replace("@tagName@", pieceofline)
+                result += newresult
     else:
         newresult = standart
         newresult = newresult.replace("@tagName@", line.strip())
