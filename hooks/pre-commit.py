@@ -13,12 +13,11 @@ standart = standart_file.read()
 lines = source_file.readlines()
 
 for line in lines:
-    if "#" in line:
-        if "#>" in line:
+    if "#>" in line:
             h = line.strip()
             l = h.find(' #>')
             result += '\n#' + h[l+4:] + '\n'
-        else: 
+    if "#" in line: 
             if re.search(r'.*#.*dev.*' , line) is not None and branch == 'dev' :
                 h = line.strip()
                 l = h.find(' #')
