@@ -68,9 +68,16 @@ for line in lines:
                 newresult = newresult.replace("@tagName@", pieceofline)
                 result += newresult
     else:
-        newresult = standart
-        newresult = newresult.replace("@tagName@", line.strip())
-        result += newresult
+        if "#>" in line:
+            h = line.strip()
+            l = h.find(' #>')
+            newresult = standart
+            newresult = newresult.replace("@tagName@", h[:l])
+            result += newresult
+        else:
+            newresult = standart
+            newresult = newresult.replace("@tagName@", line.strip())
+            result += newresult
 result = result + '\n'
 curLineBranch = ''
 conlines = connection_file.readlines()
