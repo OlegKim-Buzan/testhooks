@@ -14,6 +14,10 @@ lines = source_file.readlines()
 
 for line in lines:
     if "#" in line:
+        if "#>" in line:
+            h = line.strip()
+            l = h.find(' #>')
+            result += '\n' + h[l:] + '\n'
         if re.search(r'.*#.*dev.*' , line) is not None and branch == 'dev' :
             h = line.strip()
             l = h.find(' #')
