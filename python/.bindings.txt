@@ -63,7 +63,7 @@
 1/RefAddr/9/Content=2
 1/RefAddr/9/Encoding=String
 1/RefAddr/9/Type=MBODY
- #> com-12\511
+com-12\511
 4/ClassName=com.ibm.mq.jms.MQQueue
 4/FactoryName=com.ibm.mq.jms.MQQueueFactory
 4/RefAddr/0/Content=7
