@@ -17,7 +17,7 @@ for line in lines:
             h = line.strip()
             l = h.find(' #>')
             result += '\n#' + h[l+4:] + '\n'
-    if "#" in line: 
+    if "# " in line: 
             if re.search(r'.*#.*dev.*' , line) is not None and branch == 'dev' :
                 h = line.strip()
                 l = h.find(' #')
